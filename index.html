@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Power Score Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1>Country Power Score</h1>
+        <p class="subtitle">
+          Choose a country from the list or type one manually to calculate its score.
+        </p>
+
+        <form id="score-form" novalidate>
+          <label for="country-input">Country name</label>
+          <div class="input-row">
+            <input
+              id="country-input"
+              name="country"
+              list="country-options"
+              placeholder="e.g., United States"
+              autocomplete="off"
+              required
+            />
+            <datalist id="country-options"></datalist>
+            <button type="submit">Calculate</button>
+          </div>
+        </form>
+
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+
+        <section id="result" class="result hidden" aria-live="polite">
+          <h2 id="result-country"></h2>
+          <p class="score-line">
+            Score:
+            <strong id="result-score">0</strong>
+          </p>
+
+          <div class="breakdown">
+            <h3>Breakdown</h3>
+            <ul id="result-breakdown"></ul>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
