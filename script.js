@@ -92,7 +92,7 @@ function calculateScore(country) {
     "soldiers / population": country.soldiers / country.population,
     "aircraft carriers × 0.001": country.carriers * 0.001,
     "Olympic medals × 0.0001": country.olympicMedals * 0.0001,
-    "GDP × 0.0000001": country.gdp * 0.00000001,
+    "GDP × 0.0000001": country.gdp * 0.000000001,
     "GDP per capita × 0.0001": country.gdpPerCapita * 0.0001,
   };
 
